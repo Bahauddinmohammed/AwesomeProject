@@ -1,4 +1,5 @@
 import {
+  FlatList,
   ScrollView,
   StyleSheet,
   Text,
@@ -14,38 +15,37 @@ const Home = ({ navigation }: { navigation: any }) => {
   const screensData = [
     {
       id: 1,
-      screenName: 'Alert Example',
-      navigationName: 'AlertExample',
+      screenName: 'Images Demo',
+      navigationName: 'ImagesDemo',
     },
     {
-      id: 1,
-      screenName: 'Alert Example',
-      navigationName: 'AlertExample',
+      id: 2,
+      screenName: 'Profile Screen',
+      navigationName: 'Profile',
     },
   ];
   return (
     <View>
       <TitleHeader title="Home" noBack={true} />
 
-      <ScrollView>
-        <TouchableOpacity
-          style={{ marginVertical: 10 }}
-          onPress={() => {
-            navigation.navigate('Settings');
-          }}
-        >
-          <Text style={{ fontSize: 20 }}>1.Basics</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity
-          style={{ marginVertical: 10 }}
-          onPress={() => {
-            navigation.navigate('AlertExample');
-          }}
-        >
-          <Text style={{ fontSize: 20 }}>2.Alert Example</Text>
-        </TouchableOpacity>
-      </ScrollView>
+      <FlatList
+        data={screensData}
+        renderItem={(item: any) => {
+          console.log('itemitemitem----->', item?.item?.navigationName);
+          return (
+            <TouchableOpacity
+              style={{ marginVertical: 10 }}
+              onPress={() => {
+                navigation.navigate(item?.item?.navigationName);
+              }}
+            >
+              <Text
+                style={{ fontSize: 20 }}
+              >{`${item?.item?.id}. ${item?.item?.screenName}`}</Text>
+            </TouchableOpacity>
+          );
+        }}
+      />
     </View>
   );
 };

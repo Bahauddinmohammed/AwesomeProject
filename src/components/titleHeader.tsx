@@ -12,7 +12,7 @@ export const TitleHeader = ({
   noBack,
 }: {
   title: string;
-  noBack: boolean;
+  noBack?: boolean;
 }) => {
   const navigation = useNavigation();
 
