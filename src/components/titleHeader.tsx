@@ -1,41 +1,55 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
-import { StyleSheet, Text } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 import {
-    widthPercentageToDP as wp,
-    heightPercentageToDP as hp,
-} from "react-native-responsive-screen";
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-export const TitleHeader = ({ title }: { title: string, }) => {
-    return (
+export const TitleHeader = ({
+  title,
+  noBack,
+}: {
+  title: string;
+  noBack: boolean;
+}) => {
+  const navigation = useNavigation();
+
+  const onBackPress = () => {
+    navigation.goBack();
+  };
+  return (
+    <>
+      <SafeAreaView style={{}}>
         <>
-            <SafeAreaView style={{ marginTop: 70 }}>
-                <Text
-                    style={[
-                        styles.title,
-                        { color: "#000" },
-                    ]}
-                >
-                    {title}
-                </Text>
-            </SafeAreaView ></>
-    );
+          {!noBack && (
+            <TouchableOpacity onPress={onBackPress}>
+              <Text style={{ fontSize: hp(5) }}>←</Text>
+            </TouchableOpacity>
+          )}
+        </>
+
+        <Text style={[styles.title, { color: '#000' }]}>{title}</Text>
+      </SafeAreaView>
+    </>
+  );
 };
 
 export default TitleHeader;
 
 const styles = StyleSheet.create({
-    title: {
-        fontSize: wp("6%"),
-        fontWeight: "700",
-        textAlign: "center",
-        marginBottom: hp("5%"),
-    },
+  title: {
+    fontSize: wp('6%'),
+    fontWeight: '700',
+    textAlign: 'center',
+    marginBottom: hp('5%'),
+  },
 });
 
-
-
-{/* Why We Use Common Components */ }
+{
+  /* Why We Use Common Components */
+}
 
 // 1️⃣ We use common components to avoid writing the same code again and again.
 // 2️⃣ They help keep the app design the same on every screen.
