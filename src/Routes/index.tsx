@@ -8,6 +8,9 @@ import AlertExample from '../screens/CoreComponents/AlertExample';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import ImagesDemo from '../screens/ImagesDemo';
 import Profile from '../screens/Profile';
+import ImageBackgroundExample from '../screens/Intermediate/ImageBackgroundExample';
+import KeyboardAvoidingExample from '../screens/Intermediate/KeyboardAvoidingExample';
+import TouchableExamples from '../screens/Intermediate/TouchableExamples';
 
 export type AppStackParamList = {
   MainHome: undefined;
@@ -16,6 +19,9 @@ export type AppStackParamList = {
   AlertExample: undefined;
   ImagesDemo: undefined;
   Profile: undefined;
+  ImageBackgroundExample: undefined;
+  KeyboardAvoidingExample: undefined;
+  TouchableExamples: undefined;
 };
 
 const Stack = createNativeStackNavigator<AppStackParamList>();
@@ -31,6 +37,15 @@ const Routes = () => {
         <Stack.Screen name="MainHome" component={BottomTabNavigator} />
         <Stack.Screen name="ImagesDemo" component={ImagesDemo} />
         <Stack.Screen name="Profile" component={Profile} />
+        <Stack.Screen
+          name="ImageBackgroundExample"
+          component={ImageBackgroundExample}
+        />
+        <Stack.Screen
+          name="KeyboardAvoidingExample"
+          component={KeyboardAvoidingExample}
+        />
+        <Stack.Screen name="TouchableExamples" component={TouchableExamples} />
       </Stack.Navigator>
     </NavigationContainer>
   );

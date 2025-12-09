@@ -3,6 +3,7 @@ import React from 'react';
 
 import Routes from './src/Routes';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import ImageBackgroundExample from './src/screens/Intermediate/ImageBackgroundExample';
 
 const App = () => {
   return (

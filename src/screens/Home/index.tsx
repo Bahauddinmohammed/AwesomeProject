@@ -23,6 +23,26 @@ const Home = ({ navigation }: { navigation: any }) => {
       screenName: 'Profile Screen',
       navigationName: 'Profile',
     },
+    {
+      id: 3,
+      screenName: 'Profile Screen',
+      navigationName: 'Profile',
+    },
+    {
+      id: 4,
+      screenName: 'Image Background Example',
+      navigationName: 'ImageBackgroundExample',
+    },
+    {
+      id: 5,
+      screenName: 'Keyboard Avoiding Example',
+      navigationName: 'KeyboardAvoidingExample',
+    },
+    {
+      id: 6,
+      screenName: 'Touchable Example',
+      navigationName: 'TouchableExamples',
+    },
   ];
   return (
     <View>
