@@ -6,6 +6,7 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { BackArrow } from '../utills/Svg';
 
 export const TitleHeader = ({
   title,
@@ -21,11 +22,17 @@ export const TitleHeader = ({
   };
   return (
     <>
-      <SafeAreaView style={{}}>
+      <SafeAreaView
+        style={{
+          flexDirection: 'row',
+          alignItems: 'center',
+          marginBottom: hp('2%'),
+        }}
+      >
         <>
           {!noBack && (
             <TouchableOpacity onPress={onBackPress}>
-              <Text style={{ fontSize: hp(5) }}>←</Text>
+              <BackArrow width={60} height={80} />
             </TouchableOpacity>
           )}
         </>
@@ -43,7 +50,6 @@ const styles = StyleSheet.create({
     fontSize: wp('6%'),
     fontWeight: '700',
     textAlign: 'center',
-    marginBottom: hp('5%'),
   },
 });
 

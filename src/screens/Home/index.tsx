@@ -49,12 +49,22 @@ const Home = ({ navigation }: { navigation: any }) => {
       screenName: 'ModalExample',
       navigationName: 'ModalExample',
     },
+    {
+      id: 8,
+      screenName: 'Svg Example',
+      navigationName: 'SvgExample',
+    },
+    {
+      id: 9,
+      screenName: 'Vibration Example',
+      navigationName: 'VibrationExample',
+    },
   ];
   return (
     <View>
-      {/* <TitleHeader title="Home" noBack={true} /> */}
+      <TitleHeader title="Home" noBack={true} />
 
-      {/* <FlatList
+      <FlatList
         data={screensData}
         renderItem={(item: any) => {
           console.log('itemitemitem----->', item?.item?.navigationName);
@@ -71,9 +81,7 @@ const Home = ({ navigation }: { navigation: any }) => {
             </TouchableOpacity>
           );
         }}
-      /> */}
-
-      <ModalExample />
+      />
     </View>
   );
 };
