@@ -10,6 +10,7 @@ import React, { useState } from 'react';
 import { stylesEx } from './stylesEx';
 import { COLORS } from '../../utills/Colors';
 import TitleHeader from '../../components/TitleHeader';
+import ModalExample from '../Intermediate/ModalExample';
 
 const Home = ({ navigation }: { navigation: any }) => {
   const screensData = [
@@ -43,12 +44,17 @@ const Home = ({ navigation }: { navigation: any }) => {
       screenName: 'Touchable Example',
       navigationName: 'TouchableExamples',
     },
+    {
+      id: 7,
+      screenName: 'ModalExample',
+      navigationName: 'ModalExample',
+    },
   ];
   return (
     <View>
-      <TitleHeader title="Home" noBack={true} />
+      {/* <TitleHeader title="Home" noBack={true} /> */}
 
-      <FlatList
+      {/* <FlatList
         data={screensData}
         renderItem={(item: any) => {
           console.log('itemitemitem----->', item?.item?.navigationName);
@@ -65,7 +71,9 @@ const Home = ({ navigation }: { navigation: any }) => {
             </TouchableOpacity>
           );
         }}
-      />
+      /> */}
+
+      <ModalExample />
     </View>
   );
 };

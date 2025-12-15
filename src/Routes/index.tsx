@@ -11,6 +11,7 @@ import Profile from '../screens/Profile';
 import ImageBackgroundExample from '../screens/Intermediate/ImageBackgroundExample';
 import KeyboardAvoidingExample from '../screens/Intermediate/KeyboardAvoidingExample';
 import TouchableExamples from '../screens/Intermediate/TouchableExamples';
+import ModalExample from '../screens/Intermediate/ModalExample';
 
 export type AppStackParamList = {
   MainHome: undefined;
@@ -22,6 +23,7 @@ export type AppStackParamList = {
   ImageBackgroundExample: undefined;
   KeyboardAvoidingExample: undefined;
   TouchableExamples: undefined;
+  ModalExample: undefined;
 };
 
 const Stack = createNativeStackNavigator<AppStackParamList>();
@@ -46,6 +48,7 @@ const Routes = () => {
           component={KeyboardAvoidingExample}
         />
         <Stack.Screen name="TouchableExamples" component={TouchableExamples} />
+        <Stack.Screen name="ModalExample" component={ModalExample} />
       </Stack.Navigator>
     </NavigationContainer>
   );
