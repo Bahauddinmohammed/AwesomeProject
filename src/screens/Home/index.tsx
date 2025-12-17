@@ -59,6 +59,16 @@ const Home = ({ navigation }: { navigation: any }) => {
       screenName: 'Vibration Example',
       navigationName: 'VibrationExample',
     },
+    {
+      id: 10,
+      screenName: 'Snackbar Popup Example',
+      navigationName: 'SnackbarPopup',
+    },
+    {
+      id: 11,
+      screenName: 'Form Validation Example',
+      navigationName: 'FormValidation',
+    },
   ];
   return (
     <View>
