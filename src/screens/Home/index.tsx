@@ -69,6 +69,11 @@ const Home = ({ navigation }: { navigation: any }) => {
       screenName: 'Form Validation Example',
       navigationName: 'FormValidation',
     },
+    {
+      id: 12,
+      screenName: 'GetAPICall Example',
+      navigationName: 'GetAPICall',
+    },
   ];
   return (
     <View>

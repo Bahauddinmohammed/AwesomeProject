@@ -1,21 +1,16 @@
-import { StatusBar } from 'react-native';
 import React from 'react';
+import { StatusBar } from 'react-native';
+import { Provider } from 'react-redux';
 
 import Routes from './src/Routes';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import ImageBackgroundExample from './src/screens/Intermediate/ImageBackgroundExample';
+import { store } from './src/Store/store';
 
 const App = () => {
   return (
-    <>
-      <StatusBar
-        animated={true}
-        backgroundColor="#fff"
-        barStyle={'dark-content'}
-      />
-
+    <Provider store={store}>
+      <StatusBar animated backgroundColor="#fff" barStyle="dark-content" />
       <Routes />
-    </>
+    </Provider>
   );
 };
 

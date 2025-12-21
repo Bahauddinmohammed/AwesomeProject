@@ -16,6 +16,7 @@ import SvgExample from '../screens/Intermediate/SvgExample';
 import VibrationExample from '../screens/Intermediate/VibrationExample';
 import SnackbarPopup from '../screens/Intermediate/SnackbarPopup';
 import FormValidation from '../screens/Intermediate/FormValidation';
+import GetAPICall from '../screens/Advance/GetAPICall';
 
 export type AppStackParamList = {
   MainHome: undefined;
@@ -32,6 +33,7 @@ export type AppStackParamList = {
   VibrationExample: undefined;
   SnackbarPopup: undefined;
   FormValidation: undefined;
+  GetAPICall: undefined;
 };
 
 const Stack = createNativeStackNavigator<AppStackParamList>();
@@ -61,6 +63,7 @@ const Routes = () => {
         <Stack.Screen name="VibrationExample" component={VibrationExample} />
         <Stack.Screen name="FormValidation" component={FormValidation} />
         <Stack.Screen name="SnackbarPopup" component={SnackbarPopup} />
+        <Stack.Screen name="GetAPICall" component={GetAPICall} />
       </Stack.Navigator>
     </NavigationContainer>
   );
